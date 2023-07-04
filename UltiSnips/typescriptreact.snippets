@@ -1,0 +1,87 @@
+snippet try "try .. catch "
+try {
+	$0
+} catch(error) {
+	console.log(error)
+}
+endsnippet
+snippet trf "try .. catch "
+try {
+	$0
+} catch(error) {
+	console.log(error)
+} finally{
+
+}
+endsnippet
+snippet fc "Create react page"
+interface $1Props{}
+
+const $1: React.FC<$1Props>  = ({}) => {
+	return (
+		<div>$1</div>
+	)
+}
+
+export default $1
+endsnippet
+
+snippet note "Create state const"
+{/* $1 */} 
+endsnippet
+
+snippet todo "Create state const"
+{/* TODO: $1 */} 
+endsnippet
+
+snippet state "Create state const"
+const [$1, set${1/\w+\s*/\u$0/}] = useState()
+endsnippet
+
+snippet llog
+/*
+*	@LOG @DEBUG @INFO
+*	This log written by ::==> {{ `$USER` }}
+*
+*	Please remove your log after debugging
+*/
+console.log(" ============= ");
+console.group("${1} ------ ");
+console.log();
+console.info({${1}}, " ------ ");
+console.log();
+console.groupEnd();
+console.log(" ============= ");
+endsnippet
+snippet llow
+/*
+*	@LOG @DEBUG @WARN
+*	This log written by ::==> {{ `$USER` }}
+*
+*	Please remove your log after debugging
+*/
+console.warn(" ============= ");
+console.group("${1} ------ ");
+console.log();
+console.warn({${1}}, " ------ ");
+console.log();
+console.groupEnd();
+console.warn(" ============= ");
+endsnippet
+
+snippet lloe
+/*
+*	@LOG @DEBUG @ERROR
+*	This log written by ::==> {{ `$USER` }}
+*
+*	Please remove your log after debugging
+*/
+console.log(" ============= ");
+console.group("${1} ------ ");
+console.log();
+console.error({${1}}, " ------ ");
+console.log();
+console.groupEnd();
+console.debug(" ============= ");
+endsnippet
+
